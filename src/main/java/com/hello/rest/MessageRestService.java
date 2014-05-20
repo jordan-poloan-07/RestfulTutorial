@@ -16,6 +16,7 @@ public class MessageRestService {
 
 	// this will be the default response
 	// since other methods have explicit paths
+
 	@GET
 	public Response printDefault() {
 		return Response.status(200).entity("Welcome to message rest service")
@@ -68,7 +69,7 @@ public class MessageRestService {
 				.entity("printProgrammaticQueryParam is called, a : " + a
 						+ ", b : " + b + ", c : " + c).build();
 	}
-	
+
 	// NOTE : this is overriden by printParam
 	@GET
 	@Path("{object}")
